@@ -3,14 +3,22 @@
 <head>
     <title>Getting Started: Serving Web Content</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
 </head>
 <body>
     <p th:text="'Hello, ' + ${name} + '!'"></p>
     <h1>Form</h1>
     <form action="#" th:action="@{/greeting}" th:object="${greeting}" method="post">
-        <p>Id: <input type="text" th:field="*{id}" /></p>
-        <p>Message: <input type="text" th:field="*{content}" /></p>
-        <p><input type="submit" value="Submit" /></p>
+        <p>Id:
+            <input type="text" th:field="*{id}" style="display: block" />
+        </p>
+        <p>Message:
+            <input type="text" th:field="*{content}"  style="display: block" />
+        </p>
+        <p>
+            <input type="submit" value="Submit"  style="display: block" />
+        </p>
     </form>
+
 </body>
 </html>
